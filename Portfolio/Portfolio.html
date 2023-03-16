@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body{
+            background-image: url(images/fishies.png);
+            background-size: 50%;
+            background-repeat: repeat-y repeat-x;
+            background-color: rgb(149, 203, 232);
+        }
+        .wrapper{
+            background-color:rgb(149, 203, 232);
+            background-image: url(images/linedpaper.png);
+            background-size: cover;
+            width: 1000px;
+            margin: auto;
+            margin-top: 100px;
+            padding: 8px 40px;
+            border-radius: 10px;
+            box-shadow: 5px 10px 5px black;
+        }
+        .logo_row {
+            width: 150px;
+            margin: 0 auto;
+        }
+        .logo{
+            width: 150px;
+            height: 150px;
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+            padding: 30px;
+            padding-top: 12px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        li{
+            display: inline;
+            padding: 12px;
+        }
+        .navi{
+            max-width: 12%;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            background-image: url(images/Circle.png);
+            background-size: 100% 100%;
+            padding-bottom: 40px;
+            padding-top: 100px;
+        }
+        input[type="text"], input[type="password"]{
+            width: 100px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .snail{
+            width: 50%;
+            margin-left: 25%;
+        }
+        .buttons{
+            text-align: center;
+        }
+        .sqbutton{
+            width: 120px;
+        }
+        button{
+            background: none;
+            border: none;
+        }
+        button:hover{
+            background-image: url(images/Squiggly.png);
+            background-size: 100% 100%;
+        }
+        p{
+            text-align: center;
+            font-size: 24px;
+            font-family: fantasy;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo_row">
+            <img src="images/Logo.png" alt="Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Home.html">
+                        <img src="images/Home.png" alt="Home" class="navi">
+                    </a>
+                </li>
+                <li>
+                    <a href="About.html">
+                        <img src="images/About.png" alt="About" class="navi">
+                    </a>
+                </li>
+                <li>
+                    <a href="Portfolio.html">
+                        <img src="images/Portfolio.png" alt="Portfolio" class="navi">
+                    </a>
+                </li>
+                <li>
+                    <a href="Contacts.html">
+                        <img src="images/Contacts.png" alt="Contacts" class="navi">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>PORTFOLIO COMING SOON!</p>
+        <br />
+        <p>...in the meantime have this snail!</p>
+        <br />
+        <img src="images/Snail.png" alt="" id="img1" class="snail" />
+        <br />
+        <div class="buttons">
+            <button id="squish" onclick="turnOn()"><img src="images/Squish_button.png" alt="" class="sqbutton"></button>
+            <button id="stopsquish" onclick="turnOff()"><img src="images/Stop_button.png" alt="" class="sqbutton"></button>
+        </div>
+        <br>
+    </div>
+
+    <script>
+        let elementRef = document.getElementById("img1");
+        function turnOn() {
+            elementRef.setAttribute("src", "images/Squish.png");
+        }
+
+        function turnOff() {
+            elementRef.setAttribute("src", "images/Snail.png");
+        }
+    </script>
+</body>
+</html>
